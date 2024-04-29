@@ -58,7 +58,7 @@ class DisplayInterface:
         self.label_keyword = tk.Label(self.top_frame_keyword, text="Keywords", font=('Arial', 18))
         self.label_keyword.pack(padx=10, pady=10, anchor=tk.W)
 
-        self.textbox_keyword = tk.Text(self.top_frame_keyword, height=10, width=20, font=('Arial', 16))  # Adjust width here
+        self.textbox_keyword = tk.Text(self.top_frame_keyword, height=10, width=20, font=('Arial', 16))  
         self.textbox_keyword.pack(padx=10, pady=10, fill=tk.BOTH, expand=True)
 
     def input_buttons(self):
