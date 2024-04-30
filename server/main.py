@@ -11,9 +11,5 @@ def main():
     except Exception as err:
         print("Error Parsing", err)
  
-    
-    
-
-
 if __name__ == "__main__":
     main()

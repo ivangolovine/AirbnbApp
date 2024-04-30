@@ -75,6 +75,24 @@ def login_Airbnb():
     continue_final_login = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "[data-testid='signup-login-submit-btn']")))
     continue_final_login.click()
 
+    time.sleep(10)
+    
+    #a8jt5op atm_3f_idpfg4 atm_7h_hxbz6r atm_7i_ysn8ba atm_e2_t94yts atm_ks_zryt35 atm_l8_idpfg4 atm_mk_stnw88 atm_vv_1q9ccgz atm_vy_t94yts dir dir-ltr
+    
+    html_content = driver.page_source
+    soup = BeautifulSoup(html_content, 'lxml')
+    
+    price = []
+    price_selection = soup.find_all("span", class_='a8jt5op atm_3f_idpfg4 atm_7h_hxbz6r atm_7i_ysn8ba atm_e2_t94yts atm_ks_zryt35 atm_l8_idpfg4 atm_mk_stnw88 atm_vv_1q9ccgz atm_vy_t94yts dir dir-ltr')
+    
+    for p in price_selection:
+        pp = p.get_text()
+        price.append(pp)
+    
+    print(price)
+    
+    #
+    # driver.get('https://www.airbnb.ca/guest/inbox')
 
 
 
